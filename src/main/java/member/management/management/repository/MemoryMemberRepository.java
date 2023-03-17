@@ -1,11 +1,10 @@
 package member.management.management.repository;
 
 import member.management.management.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-public class MemoryMemberRepository implements MemberReopsitory{
+public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
     @Override

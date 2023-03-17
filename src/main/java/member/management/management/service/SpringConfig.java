@@ -1,8 +1,8 @@
 package member.management.management.service;
 
 import member.management.management.repository.JdbcMemberRepository;
-import member.management.management.repository.MemberReopsitory;
-import member.management.management.repository.MemoryMemberRepository;
+import member.management.management.repository.JdbcTemplateMemberRepository;
+import member.management.management.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,8 +23,9 @@ public class SpringConfig {
         return new MemberService(memberReopsitory());
     }
     @Bean
-    public MemberReopsitory memberReopsitory() {
-//        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+    public MemberRepository memberReopsitory() {
+        //return new MemoryMemberRepository();
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
