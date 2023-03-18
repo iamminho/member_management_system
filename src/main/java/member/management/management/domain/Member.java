@@ -1,6 +1,14 @@
 package member.management.management.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // db가 id를 자동으로 정해주는 기능
     private Long id;
     private String name;
 
