@@ -1,5 +1,6 @@
 package member.management.management.service;
 
+import member.management.management.aop.TimeTraceAop;
 import member.management.management.repository.JdbcMemberRepository;
 import member.management.management.repository.JdbcTemplateMemberRepository;
 import member.management.management.repository.JpaMemberRepository;
@@ -26,11 +27,7 @@ public class SpringConfig {
     }
 
 //    @Bean
-//    public MemberRepository memberRepository() {
-        //return new MemoryMemberRepository();
-        //return new JdbcMemberRepository(dataSource);
-        //return new JdbcTemplateMemberRepository(dataSource);
-//        return new JpaMemberRepository(em);
-
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
 //    }
 }
